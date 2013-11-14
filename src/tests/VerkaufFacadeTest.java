@@ -4,6 +4,7 @@ import mps.Persistence;
 import mps.TransactionManager;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.fertigung.repositories.FertigungsplanRepository;
+import mps.materialwirtschaft.MaterialwirtschaftFacade;
 import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
 import mps.materialwirtschaft.dtos.StuecklistenPositionDTO;
@@ -35,7 +36,7 @@ public class VerkaufFacadeTest {
 
     @Before
     public void setUp() throws Exception {
-         verkauf = new VerkaufFacade();
+         verkauf = new VerkaufFacade(new MaterialwirtschaftFacade());
     }
 
     public int testSystemtestSetup()

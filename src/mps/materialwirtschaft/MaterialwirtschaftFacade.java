@@ -14,7 +14,7 @@ import mps.materialwirtschaft.repositories.*;
  * Time: 23:14
  * To change this template use File | Settings | File Templates.
  */
-public class MaterialwirtschaftFacade {
+public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
 	private MaterialwirtschaftBusinesslogic bl;
 
 	public MaterialwirtschaftFacade()
