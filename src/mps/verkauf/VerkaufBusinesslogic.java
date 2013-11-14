@@ -3,6 +3,8 @@ package mps.verkauf;
 import mps.Persistence;
 import mps.TransactionManager;
 import mps.fertigung.FertigungFacade;
+import mps.fertigung.FertigungForVerkauf;
+import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.verkauf.dtos.*;
 import mps.verkauf.entities.*;
 import mps.verkauf.repositories.AngebotRepository;
@@ -17,6 +19,13 @@ import mps.verkauf.repositories.AuftragRepository;
  */
 public class VerkaufBusinesslogic {
 
+    MaterialwirtschaftForVerkauf mat;
+    FertigungForVerkauf fert;
+    public  VerkaufBusinesslogic(MaterialwirtschaftForVerkauf mat, FertigungForVerkauf fert)
+    {
+        this.mat = mat;
+        this.fert = fert;
+    }
 
     public AuftragDTO createAuftrag( Angebot angebot )
     {
@@ -40,8 +49,8 @@ public class VerkaufBusinesslogic {
         transactionManager.commit();
 
         // createFertigungsplan(AuftragsDTO)
-        FertigungFacade fertigungFacade = new FertigungFacade();
-        fertigungFacade.createFertigungsplan( auftrag.toDTO() );
+
+        fert.createFertigungsplan( auftrag.toDTO() );
 
         return auftrag.toDTO();
     }

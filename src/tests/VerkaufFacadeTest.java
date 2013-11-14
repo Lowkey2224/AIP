@@ -2,6 +2,7 @@ package tests;
 
 import mps.Persistence;
 import mps.TransactionManager;
+import mps.fertigung.FertigungFacade;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.fertigung.repositories.FertigungsplanRepository;
 import mps.materialwirtschaft.MaterialwirtschaftFacade;
@@ -36,7 +37,7 @@ public class VerkaufFacadeTest {
 
     @Before
     public void setUp() throws Exception {
-         verkauf = new VerkaufFacade(new MaterialwirtschaftFacade());
+         verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade());
     }
 
     public int testSystemtestSetup()

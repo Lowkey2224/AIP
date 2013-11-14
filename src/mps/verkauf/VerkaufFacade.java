@@ -1,5 +1,6 @@
 package mps.verkauf;
 
+import mps.fertigung.FertigungForVerkauf;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.verkauf.dtos.AngebotDTO;
 import mps.verkauf.dtos.AuftragDTO;
@@ -16,10 +17,13 @@ public class VerkaufFacade {
 
     private VerkaufBusinesslogic bl;
     private MaterialwirtschaftForVerkauf materialwirtschaftForVerkauf;
+    private FertigungForVerkauf fertigungForVerkauf;
 
-    public VerkaufFacade(MaterialwirtschaftForVerkauf materialwirtschaftForVerkauf) {
-        this.bl = new VerkaufBusinesslogic();
+    public VerkaufFacade(MaterialwirtschaftForVerkauf materialwirtschaftForVerkauf, FertigungForVerkauf fert) {
         this.materialwirtschaftForVerkauf = materialwirtschaftForVerkauf;
+        this.fertigungForVerkauf = fert;
+        this.bl = new VerkaufBusinesslogic(materialwirtschaftForVerkauf, fert);
+
     }
 
     public AuftragDTO createAuftrag( AngebotDTO angebotDTO )

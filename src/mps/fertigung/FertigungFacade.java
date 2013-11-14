@@ -9,7 +9,7 @@ import mps.verkauf.dtos.AuftragDTO;
  * Time: 22:10
  * To change this template use File | Settings | File Templates.
  */
-public class FertigungFacade {
+public class FertigungFacade implements FertigungForVerkauf {
 
     private FertigungBusinesslogic bl;
 
