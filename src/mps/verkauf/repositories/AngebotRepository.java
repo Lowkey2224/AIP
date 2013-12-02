@@ -2,8 +2,10 @@ package mps.verkauf.repositories;
 
 import mps.repositories.RepositoryImplementation;
 import mps.verkauf.entities.Angebot;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -38,6 +40,15 @@ public class AngebotRepository extends RepositoryImplementation<Angebot>{
             return null;
 
         return result.get(0);
+    }
+
+    public int getMaxNr()
+    {
+        Session session = sf.getCurrentSession();
+        Criteria criteria = session
+                .createCriteria(Angebot.class)
+                .setProjection(Projections.max("nr"));
+        return  (Integer)criteria.uniqueResult();
     }
 
 
