@@ -16,35 +16,30 @@ import mps.materialwirtschaft.repositories.*;
  */
 public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
 	private MaterialwirtschaftBusinesslogic bl;
+    private TransactionManager tm;
+    private BauteilRepository bauteilRepo;
 
 	public MaterialwirtschaftFacade()
 	{
+        tm = new TransactionManager( Persistence.getSessionFactory() );
 		bl = new MaterialwirtschaftBusinesslogic();
+        bauteilRepo = new BauteilRepository(Persistence.getSessionFactory());
 	}
 
     public boolean isComplex(int bauteilNr) {
-    	TransactionManager transactionManager = new TransactionManager( Persistence.getSessionFactory() );
-		BauteilRepository bauteilRepo = new BauteilRepository(Persistence.getSessionFactory());
-
-		//transactionManager.beginTransaction();
-        TransactionManager tm = new TransactionManager( Persistence.getSessionFactory() );
         tm.beginTransaction();
-
-		Bauteil bauteil = bauteilRepo.findOneByNr(bauteilNr);
-
+        Bauteil bauteil = bauteilRepo.findOneByNr(bauteilNr);
         tm.commit();
 
-        return bl.isComplex(bauteil);  
+        return bl.isComplex(bauteil);
     }
 
     public StuecklisteDTO getStueckliste(int bauteilNr)
     {
-    	TransactionManager transactionManager = new TransactionManager( Persistence.getSessionFactory() );
-		BauteilRepository bauteilRepo = new BauteilRepository(Persistence.getSessionFactory());
+        tm.beginTransaction();
+        Bauteil bauteil = bauteilRepo.findOneByNr(bauteilNr);
+        tm.commit();
 
-		//transactionManager.beginTransaction();
-
-		Bauteil bauteil = bauteilRepo.findOneByNr(bauteilNr);
         return bl.getStueckliste(bauteil);
     }
 }
