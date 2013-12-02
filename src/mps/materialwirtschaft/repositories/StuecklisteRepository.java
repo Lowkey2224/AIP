@@ -1,5 +1,6 @@
 package mps.materialwirtschaft.repositories;
 
+import mps.Repository;
 import mps.materialwirtschaft.entities.Stueckliste;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,7 +15,7 @@ import java.util.List;
  * Time: 16:03
  * To change this template use File | Settings | File Templates.
  */
-public class StuecklisteRepository {
+public class StuecklisteRepository implements Repository<Stueckliste>{
     SessionFactory sf;
 
 	public StuecklisteRepository(SessionFactory sf)

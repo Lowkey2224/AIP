@@ -1,5 +1,6 @@
 package mps.fertigung.repositories;
 
+import mps.Repository;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.materialwirtschaft.entities.Bauteil;
 import org.hibernate.Session;
@@ -15,7 +16,7 @@ import java.util.List;
  * Time: 10:30
  * To change this template use File | Settings | File Templates.
  */
-public class FertigungsplanRepository {
+public class FertigungsplanRepository implements Repository<Fertigungsplan> {
 
     SessionFactory sf;
 
