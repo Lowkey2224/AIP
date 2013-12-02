@@ -19,12 +19,15 @@ import java.util.List;
 public class BauteilRepository extends RepositoryImplementation<Bauteil> {
     SessionFactory sf;
 
-	public BauteilRepository(SessionFactory sf)
+    public BauteilRepository(SessionFactory sf)
 	{
         this.sf = sf;
     }
 
-
+    public List<Bauteil> findAll() {
+        Session session = getSessionFactory().getCurrentSession();
+        return session.createCriteria(Bauteil.class).list();
+    }
 
     public Bauteil findOneByNr(int nr)
     {

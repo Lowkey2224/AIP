@@ -2,9 +2,13 @@ package mps.materialwirtschaft;
 
 import mps.Persistence;
 import mps.TransactionManager;
+import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
 import mps.materialwirtschaft.entities.Bauteil;
 import mps.materialwirtschaft.repositories.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -41,5 +45,18 @@ public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
         tm.commit();
 
         return bl.getStueckliste(bauteil);
+    }
+
+    @Override
+    public List<BauteilDTO> getAllBauteile() {
+        tm.beginTransaction();
+        List<Bauteil> list = bauteilRepo.findAll();
+        tm.commit();
+        List<BauteilDTO> returnValue = new ArrayList<BauteilDTO>(list.size());
+        for(Bauteil bauteil : list)
+        {
+            returnValue.add(bauteil.toDTO());
+        }
+        return returnValue;
     }
 }

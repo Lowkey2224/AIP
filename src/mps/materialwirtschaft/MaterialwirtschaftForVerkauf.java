@@ -1,6 +1,9 @@
 package mps.materialwirtschaft;
 
+import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,4 +16,5 @@ public interface MaterialwirtschaftForVerkauf {
 
     public boolean isComplex(int bauteilNr);
     public StuecklisteDTO getStueckliste(int bauteilNr);
+    public List<BauteilDTO> getAllBauteile();
 }
