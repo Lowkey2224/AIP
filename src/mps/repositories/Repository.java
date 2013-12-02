@@ -1,4 +1,6 @@
-package mps;
+package mps.repositories;
+
+import org.hibernate.SessionFactory;
 
 /**
  * User: Loki
@@ -7,7 +9,8 @@ package mps;
  */
 public interface Repository<T> {
 
-    void save(T elem);
+
+    T save(T elem);
     void delete(T elem);
 
 }

@@ -1,8 +1,8 @@
 package mps.fertigung.repositories;
 
-import mps.Repository;
+import mps.repositories.Repository;
 import mps.fertigung.entities.Fertigungsplan;
-import mps.materialwirtschaft.entities.Bauteil;
+import mps.repositories.RepositoryImplementation;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -16,7 +16,7 @@ import java.util.List;
  * Time: 10:30
  * To change this template use File | Settings | File Templates.
  */
-public class FertigungsplanRepository implements Repository<Fertigungsplan> {
+public class FertigungsplanRepository extends RepositoryImplementation<Fertigungsplan> {
 
     SessionFactory sf;
 
@@ -25,16 +25,10 @@ public class FertigungsplanRepository implements Repository<Fertigungsplan> {
         this.sf = sf;
     }
 
-    public void delete(Fertigungsplan elem)
+    @Override
+    public SessionFactory getSessionFactory()
     {
-        Session session = sf.getCurrentSession();
-        session.delete(elem);
-    }
-
-    public void save(Fertigungsplan elem)
-    {
-        Session session = sf.getCurrentSession();
-        session.saveOrUpdate(elem);
+        return sf;
     }
 
     public Fertigungsplan findOneByNr(int nr)

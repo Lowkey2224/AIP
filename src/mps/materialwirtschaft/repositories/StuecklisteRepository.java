@@ -1,7 +1,8 @@
 package mps.materialwirtschaft.repositories;
 
-import mps.Repository;
+import mps.repositories.Repository;
 import mps.materialwirtschaft.entities.Stueckliste;
+import mps.repositories.RepositoryImplementation;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -15,7 +16,7 @@ import java.util.List;
  * Time: 16:03
  * To change this template use File | Settings | File Templates.
  */
-public class StuecklisteRepository implements Repository<Stueckliste>{
+public class StuecklisteRepository extends RepositoryImplementation<Stueckliste> {
     SessionFactory sf;
 
 	public StuecklisteRepository(SessionFactory sf)
@@ -23,17 +24,11 @@ public class StuecklisteRepository implements Repository<Stueckliste>{
         this.sf = sf;
     }
 
-    public void delete(Stueckliste elem)
-    {
-        Session session = sf.getCurrentSession();
-        session.delete(elem);
+    @Override
+    public SessionFactory getSessionFactory() {
+        return sf;
     }
 
-    public void save(Stueckliste elem)
-    {
-        Session session = sf.getCurrentSession();
-        session.saveOrUpdate(elem);
-    }
 
     public Stueckliste findOneById(int id)
     {
