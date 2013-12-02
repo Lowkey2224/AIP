@@ -27,32 +27,20 @@ public class VerkaufBusinesslogic {
         this.fert = fert;
     }
 
-    public AuftragDTO createAuftrag( Angebot angebot )
+    public Auftrag createAuftrag( Angebot angebot )
     {
-        TransactionManager transactionManager = new TransactionManager( Persistence.getSessionFactory() );
-
-        // Begin Transaction
-        transactionManager.beginTransaction();
-
-        // Repositories
-        AngebotRepository angebotRepository = new AngebotRepository( Persistence.getSessionFactory() );
-        AuftragRepository auftragRepository = new AuftragRepository( Persistence.getSessionFactory() );
-
         Auftrag auftrag = new Auftrag();
         auftrag.setAngebot(angebot);
 
         // Save
-        angebotRepository.save( angebot );
-        auftragRepository.save( auftrag );
+//        angebotRepository.save( angebot );
+//        auftragRepository.save( auftrag );
 
         // Commit Transaction
-        transactionManager.commit();
-
-        // createFertigungsplan(AuftragsDTO)
 
         fert.createFertigungsplan( auftrag.toDTO() );
 
-        return auftrag.toDTO();
+        return auftrag;
     }
 
 }
