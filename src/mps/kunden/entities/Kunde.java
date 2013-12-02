@@ -15,7 +15,7 @@ public class Kunde {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "ne", unique = true, nullable = false)
     public int nr;
 
     @Column(nullable = false)
