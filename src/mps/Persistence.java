@@ -1,6 +1,7 @@
 package mps;
 
 import mps.fertigung.entities.Fertigungsplan;
+import mps.kunden.entities.Kunde;
 import mps.materialwirtschaft.entities.Bauteil;
 import mps.materialwirtschaft.entities.Stueckliste;
 import mps.materialwirtschaft.entities.StuecklistenPosition;
@@ -30,6 +31,7 @@ public class Persistence {
     static {
         try {
             Configuration configuration = new Configuration();
+            configuration.addAnnotatedClass(Kunde.class);
             configuration.addAnnotatedClass(Auftrag.class);
             configuration.addAnnotatedClass(Angebot.class);
             configuration.addAnnotatedClass(Fertigungsplan.class);
