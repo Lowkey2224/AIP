@@ -53,7 +53,7 @@ public class Kunde {
         }
     }
 
-    public static Kunde fromDTO(KundeDTOImpl dto)
+    public static Kunde fromDTO(KundeDTO dto)
     {
         Kunde k = new Kunde();
         try {

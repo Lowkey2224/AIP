@@ -3,9 +3,12 @@ package mps.kunden.tests;
 
 import junit.framework.Assert;
 import mps.kunden.dtos.KundeDTO;
+import mps.kunden.dtos.KundeDTOImpl;
 import mps.kunden.entities.Kunde;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.rmi.RemoteException;
 
 /**
  * User: Loki
@@ -24,8 +27,13 @@ public class KundeTest {
         kunde1.setAddress("Adresse");
         kunde1.setName("name");
         kunde1.setNr(23);
-        kundeDTO1 = new KundeDTO("name", "Adresse", 23);
-        kundeDTO2 = new KundeDTO("name2", "Adresse2", 42);
+
+        try {
+            kundeDTO1 = new KundeDTOImpl("name", "Adresse", 23);
+            kundeDTO2 = new KundeDTOImpl("name2", "Adresse2", 42);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     @Test

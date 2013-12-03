@@ -52,11 +52,6 @@ public class Persistence {
         }
     }
 
-    /*public mps.Persistence()
-    {
-        ThreadLocalSessionContext.bind( getSession() );
-    }  */
-
     public static Session getSession() throws HibernateException {
         return ourSessionFactory.openSession();
     }
