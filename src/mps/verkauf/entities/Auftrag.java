@@ -33,6 +33,26 @@ public class Auftrag {
     //TODO: Not Nullable
     @OneToOne
 	private Angebot angebot;
+
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof Auftrag))
+            return false;
+        Auftrag a = (Auftrag)o;
+        if(a.getNr() != nr || a.isIstAbgeschlossen() != istAbgeschlossen)
+            return false;
+        if(!a.getBeauftragAm().equals(beauftragAm))
+            return false;
+        if(!a.getAngebot().equals(angebot))
+            return false;
+        return true;
+    }
 	
 	public static Auftrag fromDTO(AuftragDTO auftrag)
 	{
@@ -62,4 +82,40 @@ public class Auftrag {
 	{
 		return new AuftragDTO(nr, istAbgeschlossen, beauftragAm, angebot.toDTO());
 	}
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNr() {
+        return nr;
+    }
+
+    public void setNr(int nr) {
+        this.nr = nr;
+    }
+
+    public boolean isIstAbgeschlossen() {
+        return istAbgeschlossen;
+    }
+
+    public void setIstAbgeschlossen(boolean istAbgeschlossen) {
+        this.istAbgeschlossen = istAbgeschlossen;
+    }
+
+    public Date getBeauftragAm() {
+        return beauftragAm;
+    }
+
+    public void setBeauftragAm(Date beauftragAm) {
+        this.beauftragAm = beauftragAm;
+    }
+
+    public Angebot getAngebot() {
+        return angebot;
+    }
 }

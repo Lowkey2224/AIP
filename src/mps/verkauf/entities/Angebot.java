@@ -1,11 +1,9 @@
 package mps.verkauf.entities;
 
-import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.verkauf.dtos.*;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,6 +15,97 @@ import java.util.List;
 @Entity
 @Table(name = "angebot")
 public class Angebot {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", unique = true, nullable = false)
+    private int id;
+
+    @Column(nullable = false,  unique = true)
+    private int nr;
+
+    @Column(nullable = false)
+    private Date gueltigAb;
+
+    @Column(nullable = false)
+    private Date gueltigBis;
+
+    @Column(nullable = false)
+    private int preis;
+
+    @Column(nullable = false)
+    private int kundeNr;
+
+    @Column(nullable = false)
+    private int bauteilNr;
+
+    @OneToOne(mappedBy = "angebot")
+    private Auftrag auftrag;
+
+    public Angebot()
+    {
+        gueltigAb = new Date();
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof Angebot))
+            return false;
+        Angebot a = (Angebot)o;
+        if(a.getKundeNr()!= kundeNr || a.getNr() != nr || a.getPreis() != preis || a.getBauteilNr() != bauteilNr)
+            return false;
+        if(!a.getGueltigAb().equals(getGueltigAb()))
+            return false;
+        if(!a.getGueltigBis().equals((getGueltigBis())))
+            return false;
+        return true;
+    }
+
+    public static Angebot fromDTO(AngebotDTO angebot) {
+        Angebot ang = new Angebot();
+
+        ang.nr = angebot.getNr();
+        ang.gueltigAb = angebot.getGueltigAb();
+        ang.gueltigBis = angebot.getGueltigBis();
+        ang.preis = angebot.getPreis();
+        ang.kundeNr = angebot.getKundeNr();
+        ang.bauteilNr = angebot.getBauteilNr();
+        return ang;
+    }
+
+    public AngebotDTO toDTO()
+    {
+        return new AngebotDTO(nr, gueltigAb, gueltigBis, preis, kundeNr, bauteilNr);
+    }
+
+    public int getNr() {
+        return nr;
+    }
+
+    public Date getGueltigAb() {
+        return gueltigAb;
+    }
+
+    public Date getGueltigBis() {
+        return gueltigBis;
+    }
+
+    public int getPreis() {
+        return preis;
+    }
+
+    public int getKundeNr() {
+        return kundeNr;
+    }
+
+    public int getBauteilNr() {
+        return bauteilNr;
+    }
 
     public void setId(int id) {
         this.id = id;
@@ -49,78 +138,5 @@ public class Angebot {
     public void setAuftrag(Auftrag auftrag) {
         this.auftrag = auftrag;
     }
-
-    @Id
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", unique = true, nullable = false)
-    private int id;
-
-    @Column(nullable = false,  unique = true)
-    private int nr;
-
-    @Column(nullable = false)
-    private Date gueltigAb;
-
-    @Column(nullable = false)
-    private Date gueltigBis;
-
-    @Column(nullable = false)
-    private int preis;
-
-    @Column(nullable = false)
-    private int kundeNr;
-
-    @Column(nullable = false)
-    private int bauteilNr;
-
-    @OneToOne(mappedBy = "angebot")
-    private Auftrag auftrag;
-
-    public Angebot()
-    {
-        gueltigAb = new Date();
-    }
-
-    public int getNr() {
-        return nr;
-    }
-
-    public Date getGueltigAb() {
-        return gueltigAb;
-    }
-
-    public Date getGueltigBis() {
-        return gueltigBis;
-    }
-
-    public int getPreis() {
-        return preis;
-    }
-
-    public int getKundeNr() {
-        return kundeNr;
-    }
-
-    public int getProdukt() {
-        return bauteilNr;
-    }
-
-    public static Angebot fromDTO(AngebotDTO angebot) {
-		Angebot ang = new Angebot();
-
-        ang.nr = angebot.getNr();
-        ang.gueltigAb = angebot.getGueltigAb();
-        ang.gueltigBis = angebot.getGueltigBis();
-        ang.preis = angebot.getPreis();
-        ang.kundeNr = angebot.getKundeNr();
-        ang.bauteilNr = angebot.getBauteilNr();
-		return ang;
-    }
-	
-	public AngebotDTO toDTO()
-	{
-		return new AngebotDTO(nr, gueltigAb, gueltigBis, preis, kundeNr, bauteilNr);
-	}
 
 }

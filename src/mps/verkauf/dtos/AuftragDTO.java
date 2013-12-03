@@ -14,6 +14,25 @@ public class AuftragDTO {
 	private Date beauftragAm;
 	private AngebotDTO angebot;
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof AuftragDTO))
+            return false;
+        AuftragDTO a = (AuftragDTO)o;
+        if(a.getNr() != nr || a.getIstAbgeschlossen() != istAbgeschlossen)
+            return false;
+        if(!a.getBeauftragAm().equals(beauftragAm))
+            return false;
+        if(!a.getAngebot().equals(angebot))
+            return false;
+        return true;
+    }
+
     public int getNr() {
         return nr;
     }
