@@ -42,7 +42,7 @@ public class KundenFacade implements KundenForVerkauf{
     }
 
     @Override
-    public KundeDTO findKundeByNr(int nr) {
+    public KundeDTO findOneKundeByNr(int nr) {
         tm.beginTransaction();
         Kunde kunde = kundenRepository.findOneByNr(nr);
         tm.commit();

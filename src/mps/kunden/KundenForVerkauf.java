@@ -24,7 +24,7 @@ public interface KundenForVerkauf {
      * @param nr Kundennummer
      * @return Kunde||null
      */
-    public KundeDTO findKundeByNr(int nr);
+    public KundeDTO findOneKundeByNr(int nr);
 
     /**
      * Erstellt einen Kunden, mit dem Ubergebenen Namen, und Adresse
