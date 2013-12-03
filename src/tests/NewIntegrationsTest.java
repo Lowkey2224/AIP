@@ -30,7 +30,7 @@ public class NewIntegrationsTest {
         mat = new MaterialwirtschaftFacade();
         kund = new KundenFacade();
         fert = new FertigungFacade();
-        verk = new VerkaufFacade(mat, fert);
+        verk = new VerkaufFacade(mat, fert, kund);
     }
 
     /**

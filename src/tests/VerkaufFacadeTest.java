@@ -30,17 +30,14 @@ import java.util.Date;
  * Time: 18:11
  * To change this template use File | Settings | File Templates.
  */
-public class IntegrationsTest {
+public class VerkaufFacadeTest {
 
     VerkaufFacade verkauf;
-    MaterialwirtschaftFacade mat;
-    FertigungFacade fert;
-    KundenFacade kund;
 
 
     @Before
     public void setUp() throws Exception {
-        verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade());
+        verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade(), new KundenFacade());
 
     }
 
