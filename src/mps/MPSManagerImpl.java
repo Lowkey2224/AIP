@@ -1,11 +1,16 @@
 package mps;
 
-import java.io.Serializable;
+import Dashboard.AliveNotificator;
+import Dashboard.AliveNotificatorImpl;
+
+import java.net.MalformedURLException;
 import java.rmi.Naming;
-import java.rmi.Remote;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+
+import static java.lang.Thread.sleep;
 
 
 public class MPSManagerImpl extends UnicastRemoteObject implements MPSManager {
@@ -13,6 +18,35 @@ public class MPSManagerImpl extends UnicastRemoteObject implements MPSManager {
     private final Integer port;
     private MPSInstance mpsInstance;
     private String rmiObjectName;
+
+    private AliveNotificator aliveNotificator;
+    private Thread aliveThread;
+
+    private Thread createAliveThread()
+    {
+        return new Thread()
+        {
+            public void run()
+            {
+                while(true)
+                {
+                    try{
+                        if (aliveNotificator != null) {
+                            aliveNotificator.iamAlive(rmiObjectName);
+                            System.out.println("Sende alive");
+                        }
+                        sleep(2000);
+                    }catch(InterruptedException e)
+                    {
+                        System.out.println("AliveThread stoppt");
+                        break;
+                    } catch (RemoteException e) {
+                        e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    }
+                }
+            }
+        };
+    }
 
     public void start()
     {
@@ -27,6 +61,9 @@ public class MPSManagerImpl extends UnicastRemoteObject implements MPSManager {
             Naming.rebind("//localhost:" + port + "/" + this.rmiObjectName, (MPSManager) this);
             System.out.println("Server registriert unter " + this.rmiObjectName);
 
+            aliveThread = createAliveThread();
+            aliveThread.start();
+
         } catch(Exception ex) {
             ex.printStackTrace();
         }
@@ -36,11 +73,29 @@ public class MPSManagerImpl extends UnicastRemoteObject implements MPSManager {
     {
         System.out.println("Stoppe MPSInstance");
         mpsInstance = null;
+        aliveThread.interrupt();
+        aliveThread = null;
     }
 
     public MPSInstance getMPSInstance()
     {
        return this.mpsInstance;
+    }
+
+
+    public void setAliveBackReference(String s) throws RemoteException {
+
+        try {
+            System.out.println(" alive backrefernce wird gesetzt: " + s);
+            aliveNotificator = (AliveNotificator) Naming.lookup(s);
+        } catch (NotBoundException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (MalformedURLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
     }
 
     public MPSManagerImpl(String rmiObjectName, Integer port) throws RemoteException{
