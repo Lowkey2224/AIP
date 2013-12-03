@@ -9,4 +9,5 @@ public interface MPSManager extends Remote, Serializable {
     public void stop() throws RemoteException;
     public MPSInstance getMPSInstance() throws RemoteException;
 
+    public void setAliveBackReference(String s) throws RemoteException;
 }

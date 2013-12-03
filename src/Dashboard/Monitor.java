@@ -1,7 +1,6 @@
 package Dashboard;
 import mps.MPSInstance;
 import mps.MPSManager;
-import mps.kunden.KundenFacade;
 import mps.kunden.KundenForVerkauf;
 import mps.kunden.dtos.KundeDTO;
 
@@ -15,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -34,8 +34,10 @@ public class Monitor extends JFrame {
     private Integer countMPS1 = 0;
     private Integer countMPS2 = 0;
 
-    JLabel label;
+    private JLabel counterlabel1;
+    private JLabel counterlabel2;
     private Dispatcher dispatcher;
+    private AliveNotificator aliveNotificator;
 
     /**
      * Create the frame.
@@ -79,10 +81,10 @@ public class Monitor extends JFrame {
         lblMps.setFont(new Font("Lucida Grande", Font.ITALIC, 14));
         panel_1.add(lblMps);
 
-        label = new JLabel("0");
-        label.setFont(new Font("Lucida Grande", Font.BOLD, 45));
-        label.setBounds(386, 48, 112, 51);
-        panel_1.add(label);
+        counterlabel1 = new JLabel("0");
+        counterlabel1.setFont(new Font("Lucida Grande", Font.BOLD, 45));
+        counterlabel1.setBounds(386, 48, 112, 51);
+        panel_1.add(counterlabel1);
 
         Canvas canvas = new Canvas();
         canvas.setBackground(Color.RED);
@@ -164,10 +166,11 @@ public class Monitor extends JFrame {
         lblMps_1.setBounds(6, 6, 41, 17);
         panel_2.add(lblMps_1);
 
-        JLabel label_4 = new JLabel("0");
-        label_4.setFont(new Font("Lucida Grande", Font.BOLD, 45));
-        label_4.setBounds(386, 48, 112, 51);
-        panel_2.add(label_4);
+
+        counterlabel2 = new JLabel("0");
+        counterlabel2.setFont(new Font("Lucida Grande", Font.BOLD, 45));
+        counterlabel2.setBounds(386, 48, 112, 51);
+        panel_2.add(counterlabel2);
 
         Canvas canvas_5 = new Canvas();
         canvas_5.setBackground(Color.RED);
@@ -325,20 +328,43 @@ public class Monitor extends JFrame {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
+    /*
+Runnable worker = new Runnable() {
+@Override
+public void run() {
 
+}
+public void alive()
+{
+
+}
+};         */
     private void connectMPS() {
 
+        String reference = "//localhost:2033/monitor";
+
         try {
+
+            // === Alive Server vorbereiten
+            LocateRegistry.createRegistry(2033);
+
+
+            aliveNotificator = new AliveNotificatorImpl(this);
+            // RMI Object Rebind
+            Naming.rebind(reference, aliveNotificator);
+
             mpsManager1 = (MPSManager) Naming.lookup(mpsAdress1);
+            mpsManager1.setAliveBackReference(reference);
         } catch(Exception ex) {
-            System.out.println("MPS1 wurde nicht gefunden");
+            System.out.println("MPS1 wurde nicht gefunden oder Fehler beim init");
             ex.printStackTrace();
         }
 
         try {
             mpsManager2 = (MPSManager) Naming.lookup(mpsAdress2);
+            mpsManager2.setAliveBackReference(reference);
         } catch(Exception ex) {
-            System.out.println("MPS2 wurde nicht gefunden");
+            System.out.println("MPS2 wurde nicht gefunden oder Fehler beim init");
             ex.printStackTrace();
         }
 
@@ -368,11 +394,21 @@ public class Monitor extends JFrame {
 
     private void refreshView() {
 
-        label.setText(countMPS1.toString());
+        counterlabel1.setText(countMPS1.toString());
+        counterlabel2.setText(countMPS2.toString());
 
     }
 
     public void setDispatcher(Dispatcher dispatcher) {
         this.dispatcher = dispatcher;
+    }
+
+    public void mps1Alive() {
+
+        System.out.println("MPS1 alive");
+    }
+
+    public void mps2Alive() {
+        System.out.println("MPS2 alive");
     }
 }
