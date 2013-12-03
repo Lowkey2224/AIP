@@ -1,9 +1,6 @@
 package mps.kunden;
 
-import mps.kunden.dtos.KundeDTO;
 import mps.kunden.entities.Kunde;
-
-import java.util.List;
 
 /**
  * User: Loki

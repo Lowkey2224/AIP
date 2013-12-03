@@ -22,7 +22,8 @@ public class TransactionManager {
     public void beginTransaction()
     {
         Session session = sf.getCurrentSession();
-        session.beginTransaction();
+        if( !session.getTransaction().isActive() )
+            session.beginTransaction();
     }
 
     public void commit()

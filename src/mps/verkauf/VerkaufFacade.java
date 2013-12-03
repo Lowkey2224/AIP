@@ -3,10 +3,9 @@ package mps.verkauf;
 import mps.Persistence;
 import mps.TransactionManager;
 import mps.fertigung.FertigungForVerkauf;
-import mps.kunden.dtos.KundeDTO;
+import mps.kunden.dtos.KundeDTOImpl;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.materialwirtschaft.dtos.BauteilDTO;
-import mps.materialwirtschaft.entities.Bauteil;
 import mps.verkauf.dtos.AngebotDTO;
 import mps.verkauf.dtos.AuftragDTO;
 import mps.verkauf.entities.Angebot;
@@ -42,7 +41,7 @@ public class VerkaufFacade {
 
     }
 
-    public AngebotDTO createAngebot(KundeDTO kundeDTO)
+    public AngebotDTO createAngebot(KundeDTOImpl kundeDTO)
     {
         Angebot a = this.bl.createAngebot(kundeDTO);
         tm.beginTransaction();

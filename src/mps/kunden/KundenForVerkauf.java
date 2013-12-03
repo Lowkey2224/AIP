@@ -1,7 +1,11 @@
 package mps.kunden;
 
 import mps.kunden.dtos.KundeDTO;
+import mps.kunden.dtos.KundeDTOImpl;
 
+import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -9,7 +13,7 @@ import java.util.List;
  * Date: 02.12.13
  * Time: 17:55
  */
-public interface KundenForVerkauf {
+public interface KundenForVerkauf extends Remote, Serializable {
     /**
      * Gibt alle Kunden mit dem entsprechenden Namen zurück. gibt eine leere
      * Liste zurück falls kein Kunde gefunden wurde
@@ -17,14 +21,14 @@ public interface KundenForVerkauf {
      * @return Eine Liste mit allen Kunden die den uebergebenen Namen haben.
      * Gibt eine leere Liste zurueck falls kein Kunde gefunden wurde.
      */
-    public List<KundeDTO> findKundenByName(String name);
+    public List<KundeDTO> findKundenByName(String name) throws RemoteException;
 
     /**
      * Gibt den Kunden mit der uebergebenen Kundennummer zurueck. Null wenn kein Kunde gefunden wurde.
      * @param nr Kundennummer
      * @return Kunde||null
      */
-    public KundeDTO findKundeByNr(int nr);
+    public KundeDTO findKundeByNr(int nr) throws RemoteException;
 
     /**
      * Erstellt einen Kunden, mit dem Ubergebenen Namen, und Adresse
@@ -34,5 +38,5 @@ public interface KundenForVerkauf {
      * @param addresse Adresse
      * @return Ein neues Kundenobjekt.
      */
-    public KundeDTO createKunde(String name, String addresse);
+    public KundeDTO createKunde(String name, String addresse) throws RemoteException;
 }
