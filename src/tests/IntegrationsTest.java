@@ -5,6 +5,7 @@ import mps.TransactionManager;
 import mps.fertigung.FertigungFacade;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.fertigung.repositories.FertigungsplanRepository;
+import mps.kunden.KundenFacade;
 import mps.materialwirtschaft.MaterialwirtschaftFacade;
 import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
@@ -34,10 +35,15 @@ import java.util.Date;
 public class IntegrationsTest {
 
     VerkaufFacade verkauf;
+    MaterialwirtschaftFacade mat;
+    FertigungFacade fert;
+    KundenFacade kund;
+
 
     @Before
     public void setUp() throws Exception {
-         verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade());
+        verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade());
+
     }
 
     public int testSystemtestSetup()
