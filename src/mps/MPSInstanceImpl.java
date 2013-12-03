@@ -39,7 +39,7 @@ public class MPSInstanceImpl extends UnicastRemoteObject implements MPSInstance 
         this.fertigungFacade            = new FertigungFacade();
         this.kundenFacade               = new KundenFacade();
         this.materialwirtschaftFacade   = new MaterialwirtschaftFacade();
-        this.verkaufFacade              = new VerkaufFacade(this.materialwirtschaftFacade, this.fertigungFacade);
+        this.verkaufFacade              = new VerkaufFacade(this.materialwirtschaftFacade, this.fertigungFacade, this.kundenFacade);
 
     }
 }

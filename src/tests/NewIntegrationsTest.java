@@ -11,6 +11,7 @@ import mps.verkauf.dtos.AuftragDTO;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -27,10 +28,16 @@ public class NewIntegrationsTest {
     @Before
     public void setup()
     {
-        mat = new MaterialwirtschaftFacade();
-        kund = new KundenFacade();
-        fert = new FertigungFacade();
-        verk = new VerkaufFacade(mat, fert, kund);
+
+        try {
+            mat = new MaterialwirtschaftFacade();
+            kund = new KundenFacade();
+            fert = new FertigungFacade();
+            verk = new VerkaufFacade(mat, fert, kund);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
     }
 
     /**
@@ -55,9 +62,15 @@ public class NewIntegrationsTest {
     @Test
     public void testCreateKunde()
     {
-        KundeDTO k = kund.createKunde("Patrick Bateman", " W. 81st Street");
-        assert(kund.findOneKundeByNr(k.getNr()).equals(k));
-        assert(kund.findKundenByName("Patrick Bateman").get(0).equals(k));
+        KundeDTO k = null;
+        try {
+            k = kund.createKunde("Patrick Bateman", " W. 81st Street");
+            assert(kund.findOneKundeByNr(k.getNr()).equals(k));
+            assert(kund.findKundenByName("Patrick Bateman").get(0).equals(k));
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
     }
 
 

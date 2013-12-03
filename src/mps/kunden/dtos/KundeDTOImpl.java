@@ -35,18 +35,24 @@ public class KundeDTOImpl extends UnicastRemoteObject implements KundeDTO, Seria
     }
 
     public boolean equals(Object other)
-    {
-        if(other == null)
-            return false;
-        if(!(other instanceof KundeDTO))
-            return false;
-        KundeDTO o = (KundeDTO)other;
-        if (o.getNr() != this.getNr())
-            return false;
-        if (!o.getName().equals(this.getName()))
-            return false;
-        if(!o.getAddress().equals(this.getAddress()))
-            return false;
-        return true;
+    {    try {
+            if(other == null)
+                return false;
+            if(!(other instanceof KundeDTO))
+                return false;
+            KundeDTO o = (KundeDTO)other;
+
+                if (o.getNr() != this.getNr())
+                    return false;
+
+            if (!o.getName().equals(this.getName()))
+                return false;
+            if(!o.getAddress().equals(this.getAddress()))
+                return false;
+            return true;
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        return false;
     }
 }
