@@ -30,6 +30,23 @@ public class Bauteil {
 //        this.nr = nr;
     }
 
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof Bauteil))
+            return false;
+        Bauteil b = (Bauteil)o;
+        if(b.getNr() != this.getNr())
+            return false;
+        if(!b.getName().equals(this.getName()))
+            return false;
+        if(!b.getStueckliste().equals(this.getStueckliste()))
+            return false;
+        return true;
+    }
+
     public Bauteil (Stueckliste stueckListe, String name, int nr) {
         this.stueckliste = stueckListe;
         this.name = name;

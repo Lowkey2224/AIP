@@ -6,6 +6,8 @@ import mps.kunden.dtos.KundeDTO;
 import mps.materialwirtschaft.MaterialwirtschaftFacade;
 import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.verkauf.VerkaufFacade;
+import mps.verkauf.dtos.AngebotDTO;
+import mps.verkauf.dtos.AuftragDTO;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -54,15 +56,26 @@ public class NewIntegrationsTest {
     public void testCreateKunde()
     {
         KundeDTO k = kund.createKunde("Patrick Bateman", " W. 81st Street");
-        assert(kund.findOneKundeByNr(k.getNr()).getName().equals(k.getName()));
-        assert(kund.findOneKundeByNr(k.getNr()).getAddress().equals(k.getAddress()));
-        assert(kund.findKundenByName("Patrick Bateman").get(0).getAddress().equals(k.getAddress()));
+        assert(kund.findOneKundeByNr(k.getNr()).equals(k));
+        assert(kund.findKundenByName("Patrick Bateman").get(0).equals(k));
     }
 
 
     @Test
-    public void testCreateAngebot()
+    public void testCreateAuftrag()
     {
-
+        KundeDTO k = null;
+        int i = 0;
+        while (k == null)
+        {
+            k = kund.findOneKundeByNr(i++);
+        }
+        i=0;
+        BauteilDTO bt = verk.showBauteile().get(0);
+        AngebotDTO an = verk.createAngebot(k);
+        an = verk.addBauteil(an, bt);
+        AuftragDTO auf = verk.createAuftrag(an);
+        assert(auf.getAngebot().equals(an));
+        assert (!auf.getIstAbgeschlossen());
     }
 }

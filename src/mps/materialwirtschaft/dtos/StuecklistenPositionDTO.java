@@ -18,6 +18,7 @@ public class StuecklistenPositionDTO {
 		this.menge = menge;
 	}
 
+    @Override
     public boolean equals(Object o)
     {
         if(o ==  null)
