@@ -36,8 +36,31 @@ public class Monitor extends JFrame {
 
     private JLabel counterlabel1;
     private JLabel counterlabel2;
+
+    JLabel lastMPS1AliveLabel;
+    JLabel lastMPS2AliveLabel;
+
     private Dispatcher dispatcher;
     private AliveNotificator aliveNotificator;
+
+
+    Thread refreshThread = new Thread()
+    {
+        public void run()
+        {
+            while(true)
+            {
+                try{
+                    refreshView();
+                    sleep(200);
+                }catch(InterruptedException e)
+                {
+                    System.out.println("RefresThread stoppt");
+                    break;
+                }
+            }
+        }
+    };
 
     /**
      * Create the frame.
@@ -140,10 +163,11 @@ public class Monitor extends JFrame {
         lblZeitSeitLetzter.setBounds(301, 8, 196, 16);
         panel_1.add(lblZeitSeitLetzter);
 
-        JLabel lblMs = new JLabel("110 ms");
-        lblMs.setHorizontalAlignment(SwingConstants.RIGHT);
-        lblMs.setBounds(444, 7, 86, 16);
-        panel_1.add(lblMs);
+
+        lastMPS1AliveLabel = new JLabel("110 ms");
+        lastMPS1AliveLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        lastMPS1AliveLabel.setBounds(444, 7, 86, 16);
+        panel_1.add(lastMPS1AliveLabel);
 
         JLabel label_1 = new JLabel("00:00:23");
         label_1.setFont(new Font("Lucida Grande", Font.BOLD, 45));
@@ -224,10 +248,11 @@ public class Monitor extends JFrame {
         label_6.setBounds(301, 8, 196, 16);
         panel_2.add(label_6);
 
-        JLabel label_7 = new JLabel("110 ms");
-        label_7.setHorizontalAlignment(SwingConstants.RIGHT);
-        label_7.setBounds(444, 7, 86, 16);
-        panel_2.add(label_7);
+
+        lastMPS2AliveLabel = new JLabel("110 ms");
+        lastMPS2AliveLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        lastMPS2AliveLabel.setBounds(444, 7, 86, 16);
+        panel_2.add(lastMPS2AliveLabel);
 
         JLabel label_8 = new JLabel("00:00:23");
         label_8.setFont(new Font("Lucida Grande", Font.BOLD, 45));
@@ -265,6 +290,8 @@ public class Monitor extends JFrame {
         this.mpsAdress1 = mps1;
         this.mpsAdress2 = mps2;
         connectMPS();
+
+        refreshThread.start();
 
     }
 
@@ -328,17 +355,9 @@ public class Monitor extends JFrame {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
-    /*
-Runnable worker = new Runnable() {
-@Override
-public void run() {
 
-}
-public void alive()
-{
 
-}
-};         */
+
     private void connectMPS() {
 
         String reference = "//localhost:2033/monitor";
@@ -347,7 +366,6 @@ public void alive()
 
             // === Alive Server vorbereiten
             LocateRegistry.createRegistry(2033);
-
 
             aliveNotificator = new AliveNotificatorImpl(this);
             // RMI Object Rebind
@@ -394,6 +412,12 @@ public void alive()
 
     private void refreshView() {
 
+        Long timediff1 = System.currentTimeMillis() - lastMPS1Alive;
+        lastMPS1AliveLabel.setText( timediff1.toString() + " ms");
+
+        Long timediff2 = System.currentTimeMillis() - lastMPS2Alive;
+        lastMPS2AliveLabel.setText( timediff2.toString() + " ms");
+
         counterlabel1.setText(countMPS1.toString());
         counterlabel2.setText(countMPS2.toString());
 
@@ -405,10 +429,16 @@ public void alive()
 
     public void mps1Alive() {
 
+        refreshView();
+        lastMPS1Alive = System.currentTimeMillis();
         System.out.println("MPS1 alive");
     }
 
     public void mps2Alive() {
+
+
+        refreshView();
+        lastMPS2Alive = System.currentTimeMillis();
         System.out.println("MPS2 alive");
     }
 }
