@@ -17,6 +17,25 @@ public class ArbeitsplanDTO {
         return bauteilNr;
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if (o == null)
+            return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof ArbeitsplanDTO))
+            return false;
+        ArbeitsplanDTO a = (ArbeitsplanDTO) o;
+        if(a.getId() != this.getId())
+            return false;
+        if(a.getBauteilNr() != this.getBauteilNr())
+            return false;
+        if(a.getNr() !=  this.getNr())
+            return false;
+        return true;
+    }
+
     public void setBauteilNr(int bauteilNr) {
         this.bauteilNr = bauteilNr;
     }

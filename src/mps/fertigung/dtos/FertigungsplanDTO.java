@@ -11,14 +11,29 @@ public class FertigungsplanDTO {
 
     private int nr;
     private int id;
+    private int auftragNr;
+    private int produktId;
+
     public FertigungsplanDTO(int produktId, int nr, int auftragNr) {
         this.produktId = produktId;
         this.nr = nr;
         this.auftragNr = auftragNr;
     }
 
-    private int auftragNr;
-    private int produktId;
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o ==  null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof FertigungsplanDTO))
+            return false;
+        FertigungsplanDTO f = (FertigungsplanDTO)o;
+        if(f.nr != nr || f.id != id || f.auftragNr != auftragNr || f.produktId != produktId)
+            return false;
+        return true;
+    }
 
     public int getNr() {
         return nr;

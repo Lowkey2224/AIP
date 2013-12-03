@@ -31,6 +31,21 @@ public class Fertigungsplan {
 
     }
 
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o ==  null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof Fertigungsplan))
+            return false;
+        Fertigungsplan f = (Fertigungsplan)o;
+        if(f.nr != nr || f.id != id || f.auftragNr != auftragNr || f.bauteilNr != bauteilNr)
+            return false;
+        return true;
+    }
+
     public static Fertigungsplan fromDTO(FertigungsplanDTO dto)
     {
         Fertigungsplan fp = new Fertigungsplan();
