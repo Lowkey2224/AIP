@@ -8,7 +8,11 @@ import mps.fertigung.repositories.FertigungsplanRepository;
 import mps.materialwirtschaft.MaterialwirtschaftFacade;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
 import mps.materialwirtschaft.dtos.StuecklistenPositionDTO;
+import mps.materialwirtschaft.entities.Bauteil;
+import mps.materialwirtschaft.entities.Stueckliste;
+import mps.materialwirtschaft.repositories.BauteilRepository;
 import mps.verkauf.dtos.AuftragDTO;
+import org.hibernate.SessionFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +26,12 @@ import java.util.List;
  */
 public class FertigungBusinesslogic {
 
+//    private final SessionFactory sf;
 
+    /*public FertigungBusinesslogic(SessionFactory sf)
+    {
+        this.sf = sf;
+    }*/
 
 
     public Fertigungsplan createFertigungsplan(AuftragDTO auftragDTO) {
@@ -36,6 +45,8 @@ public class FertigungBusinesslogic {
 
 
     }
+
+
         /*
     public List<Arbeitsplan> getArbeitsplan(BauteilDTO bauteil)
     {

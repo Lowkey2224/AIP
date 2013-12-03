@@ -1,5 +1,6 @@
 package mps.kunden.entities;
 
+import mps.kunden.dtos.KundeDTO;
 import mps.kunden.dtos.KundeDTOImpl;
 
 import javax.persistence.*;
@@ -25,7 +26,24 @@ public class Kunde {
     @Column(nullable =  false)
     public String address;
 
-    public KundeDTOImpl toDTO()
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof Kunde))
+            return false;
+        Kunde other = (Kunde)o;
+        if (!other.getAddress().equals(this.getAddress()))
+            return false;
+        if(!other.getName().equals(this.getName()))
+            return false;
+        if(other.getNr()!= this.getNr())
+            return false;
+        return true;
+    }
+
+    public KundeDTO toDTO()
     {
         try {
             return new KundeDTOImpl(name, address,nr);

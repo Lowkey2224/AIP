@@ -28,6 +28,26 @@ public class Arbeitsplan{
 
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+
+        if (o == null)
+            return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof Arbeitsplan))
+            return false;
+        Arbeitsplan a = (Arbeitsplan) o;
+        if(a.getId() != this.getId())
+            return false;
+        if(a.getBauteilNr() != this.getBauteilNr())
+            return false;
+        if(a.getNr() !=  this.getNr())
+            return false;
+        return true;
+    }
+
     public static Arbeitsplan fromDTO(ArbeitsplanDTO dto)
     {
         Arbeitsplan fp = new Arbeitsplan();

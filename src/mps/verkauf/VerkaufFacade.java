@@ -4,6 +4,8 @@ import mps.Persistence;
 import mps.TransactionManager;
 import mps.fertigung.FertigungForVerkauf;
 import mps.kunden.dtos.KundeDTOImpl;
+import mps.kunden.KundenForVerkauf;
+import mps.kunden.dtos.KundeDTO;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.verkauf.dtos.AngebotDTO;
@@ -13,6 +15,7 @@ import mps.verkauf.entities.Auftrag;
 import mps.verkauf.repositories.AngebotRepository;
 import mps.verkauf.repositories.AuftragRepository;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -22,7 +25,8 @@ import java.util.List;
  * Time: 18:07
  * To change this template use File | Settings | File Templates.
  */
-public class VerkaufFacade {
+public class VerkaufFacade implements VerkaufForGUI{
+    private final KundenForVerkauf kund;
     private TransactionManager tm;
     private AuftragRepository auftragRepository;
     private AngebotRepository angebotRepository;
@@ -31,8 +35,9 @@ public class VerkaufFacade {
     private FertigungForVerkauf fertigungForVerkauf;
 
 
-    public VerkaufFacade(MaterialwirtschaftForVerkauf materialwirtschaftForVerkauf, FertigungForVerkauf fert) {
+    public VerkaufFacade(MaterialwirtschaftForVerkauf materialwirtschaftForVerkauf, FertigungForVerkauf fert, KundenForVerkauf kund) {
         this.materialwirtschaftForVerkauf = materialwirtschaftForVerkauf;
+        this.kund = kund;
         this.fertigungForVerkauf = fert;
         this.bl = new VerkaufBusinesslogic(materialwirtschaftForVerkauf, fert);
         TransactionManager transactionManager = new TransactionManager( Persistence.getSessionFactory() );
@@ -41,7 +46,28 @@ public class VerkaufFacade {
 
     }
 
-    public AngebotDTO createAngebot(KundeDTOImpl kundeDTO)
+    @Override
+    public List<KundeDTO> findKundenByName(String name) {
+        try {
+            return kund.findKundenByName(name);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return null;
+        }
+    }
+
+    @Override
+    public KundeDTO findOneKundeByNr(int nr) {
+        try {
+            return kund.findOneKundeByNr(nr);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return null;
+        }
+    }
+
+    @Override
+    public AngebotDTO createAngebot(KundeDTO kundeDTO)
     {
         Angebot a = this.bl.createAngebot(kundeDTO);
         tm.beginTransaction();
@@ -50,6 +76,7 @@ public class VerkaufFacade {
         return a.toDTO();
     }
 
+    @Override
     public AngebotDTO addBauteil(AngebotDTO angebotDTO, BauteilDTO bauteilDTO)
     {
         Angebot angebot = Angebot.fromDTO(angebotDTO);
@@ -60,11 +87,13 @@ public class VerkaufFacade {
         return angebot.toDTO();
     }
 
+    @Override
     public List<BauteilDTO> showBauteile()
     {
         return materialwirtschaftForVerkauf.getAllBauteile();
     }
 
+    @Override
     public AuftragDTO createAuftrag( AngebotDTO angebotDTO )
     {
         Angebot angebot = Angebot.fromDTO(angebotDTO);

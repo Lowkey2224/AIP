@@ -18,6 +18,25 @@ public class AngebotDTO {
     private int kundeNr;
     private int bauteilNr;
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(o == this)
+            return true;
+        if(!(o instanceof AngebotDTO))
+            return false;
+        AngebotDTO a = (AngebotDTO)o;
+        if(a.getKundeNr()!= kundeNr || a.getNr() != nr || a.getPreis() != preis || a.getBauteilNr() != bauteilNr)
+            return false;
+        if(!a.getGueltigAb().equals(getGueltigAb()))
+            return false;
+        if(!a.getGueltigBis().equals((getGueltigBis())))
+            return false;
+        return true;
+    }
+
     public int getPreis() {
         return preis;
     }

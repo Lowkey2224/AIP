@@ -5,10 +5,8 @@ import mps.TransactionManager;
 import mps.fertigung.FertigungFacade;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.fertigung.repositories.FertigungsplanRepository;
+import mps.kunden.KundenFacade;
 import mps.materialwirtschaft.MaterialwirtschaftFacade;
-import mps.materialwirtschaft.dtos.BauteilDTO;
-import mps.materialwirtschaft.dtos.StuecklisteDTO;
-import mps.materialwirtschaft.dtos.StuecklistenPositionDTO;
 import mps.materialwirtschaft.entities.Bauteil;
 import mps.materialwirtschaft.entities.Stueckliste;
 import mps.materialwirtschaft.entities.StuecklistenPosition;
@@ -20,7 +18,8 @@ import mps.verkauf.dtos.AngebotDTO;
 import mps.verkauf.dtos.AuftragDTO;
 import mps.verkauf.entities.Angebot;
 import mps.verkauf.repositories.AngebotRepository;
-import org.junit.*;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.Date;
 
@@ -35,9 +34,11 @@ public class VerkaufFacadeTest {
 
     VerkaufFacade verkauf;
 
+
     @Before
     public void setUp() throws Exception {
-         verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade());
+        verkauf = new VerkaufFacade(new MaterialwirtschaftFacade(), new FertigungFacade(), new KundenFacade());
+
     }
 
     public int testSystemtestSetup()

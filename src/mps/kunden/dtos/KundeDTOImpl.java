@@ -33,4 +33,20 @@ public class KundeDTOImpl extends UnicastRemoteObject implements KundeDTO, Seria
     public int getNr()   throws RemoteException {
         return nr;
     }
+
+    public boolean equals(Object other)
+    {
+        if(other == null)
+            return false;
+        if(!(other instanceof KundeDTO))
+            return false;
+        KundeDTO o = (KundeDTO)other;
+        if (o.getNr() != this.getNr())
+            return false;
+        if (!o.getName().equals(this.getName()))
+            return false;
+        if(!o.getAddress().equals(this.getAddress()))
+            return false;
+        return true;
+    }
 }

@@ -24,6 +24,29 @@ public class StuecklisteDTO {
         this.gueltigAb = new Date();
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof StuecklisteDTO))
+            return false;
+        StuecklisteDTO stl = (StuecklisteDTO)o;
+        if(!stl.getBauteil().equals(this.getBauteil()))
+            return false;
+        if(!stl.getGueltigAb().equals(this.getGueltigAb()))
+            return false;
+        if(!stl.getGueltigBis().equals(this.getGueltigBis()))
+            return false;
+        if(stl.getId()!=this.getId())
+            return false;
+        if(stl.getStueckliste().size() != this.getStueckliste().size())
+            return false;
+        if (!stl.getStueckliste().equals(this.getStueckliste()))
+            return false;
+        return true;
+    }
+
     public int add(StuecklistenPositionDTO elem)
 	{
 		stueckliste.add(elem);

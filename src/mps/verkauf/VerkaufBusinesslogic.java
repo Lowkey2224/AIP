@@ -2,6 +2,7 @@ package mps.verkauf;
 
 import mps.Persistence;
 import mps.fertigung.FertigungForVerkauf;
+import mps.kunden.dtos.KundeDTO;
 import mps.kunden.dtos.KundeDTOImpl;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.materialwirtschaft.dtos.BauteilDTO;
@@ -44,7 +45,7 @@ public class VerkaufBusinesslogic {
         return auftrag;
     }
 
-    public Angebot createAngebot(KundeDTOImpl kundeDTO) {
+    public Angebot createAngebot(KundeDTO kundeDTO) {
         Angebot angebot = new Angebot();
         angebot.setGueltigAb(new Date());
         try {

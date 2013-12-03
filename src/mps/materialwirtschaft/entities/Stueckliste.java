@@ -32,6 +32,29 @@ public class Stueckliste {
         positionen = new ArrayList<StuecklistenPosition>();
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof Stueckliste))
+            return false;
+        Stueckliste stl = (Stueckliste)o;
+        if(!stl.getBauteil().equals(this.getBauteil()))
+            return false;
+        if(!stl.getGueltigAb().equals(this.getGueltigAb()))
+            return false;
+        if(!stl.getGueltigBis().equals(this.getGueltigBis()))
+            return false;
+        if(stl.getId()!=this.getId())
+            return false;
+        if(stl.getPositionen().size() != this.getPositionen().size())
+            return false;
+        if (!stl.getPositionen().equals(this.getPositionen()))
+            return false;
+        return true;
+    }
+
     public static Stueckliste fromDTO(StuecklisteDTO liste)
     {
         if (liste == null)

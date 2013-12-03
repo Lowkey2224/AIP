@@ -33,6 +33,24 @@ public class StuecklistenPosition {
         this.menge = menge;
     }
 
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o ==  null)
+            return false;
+        if(this == o)
+            return true;
+        if(!(o instanceof StuecklistenPosition))
+            return false;
+        StuecklistenPosition p = (StuecklistenPosition)o;
+        if(!p.getBauteil().equals(this.getBauteil()))
+            return false;
+        if(p.getId() != this.getId())
+            return false;
+        if(p.getMenge() != this.getMenge())
+            return false;
+        return true;
+    }
 
     public int getId() {
         return id;

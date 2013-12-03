@@ -4,6 +4,9 @@ import mps.TransactionManager;
 import mps.fertigung.dtos.FertigungsplanDTO;
 import mps.fertigung.entities.Fertigungsplan;
 import mps.fertigung.repositories.FertigungsplanRepository;
+import mps.materialwirtschaft.dtos.BauteilDTO;
+import mps.materialwirtschaft.entities.Bauteil;
+import mps.materialwirtschaft.entities.Stueckliste;
 import mps.verkauf.dtos.AuftragDTO;
 
 /**
@@ -13,7 +16,7 @@ import mps.verkauf.dtos.AuftragDTO;
  * Time: 22:10
  * To change this template use File | Settings | File Templates.
  */
-public class FertigungFacade implements FertigungForVerkauf {
+public class FertigungFacade implements FertigungForVerkauf{
 
     private FertigungBusinesslogic bl;
     private TransactionManager tm;
@@ -34,5 +37,6 @@ public class FertigungFacade implements FertigungForVerkauf {
 
         return fp.toDTO();
     }
+
 
 }

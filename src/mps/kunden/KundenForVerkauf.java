@@ -25,10 +25,11 @@ public interface KundenForVerkauf extends Remote, Serializable {
 
     /**
      * Gibt den Kunden mit der uebergebenen Kundennummer zurueck. Null wenn kein Kunde gefunden wurde.
+     *
      * @param nr Kundennummer
      * @return Kunde||null
      */
-    public KundeDTO findKundeByNr(int nr) throws RemoteException;
+    public KundeDTO findOneKundeByNr(int nr) throws RemoteException;
 
     /**
      * Erstellt einen Kunden, mit dem Ubergebenen Namen, und Adresse

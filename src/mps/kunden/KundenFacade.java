@@ -3,7 +3,6 @@ package mps.kunden;
 import mps.Persistence;
 import mps.TransactionManager;
 import mps.kunden.dtos.KundeDTO;
-import mps.kunden.dtos.KundeDTOImpl;
 import mps.kunden.entities.Kunde;
 import mps.kunden.repositories.KundeRepository;
 
@@ -43,7 +42,9 @@ public class KundenFacade extends UnicastRemoteObject implements KundenForVerkau
         return returnValue;
     }
 
-    public KundeDTO findKundeByNr(int nr) throws RemoteException{
+
+    @Override
+    public KundeDTO findOneKundeByNr(int nr) {
         tm.beginTransaction();
         Kunde kunde = kundenRepository.findOneByNr(nr);
         tm.commit();

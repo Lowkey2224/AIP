@@ -5,6 +5,7 @@ import mps.TransactionManager;
 import mps.materialwirtschaft.dtos.BauteilDTO;
 import mps.materialwirtschaft.dtos.StuecklisteDTO;
 import mps.materialwirtschaft.entities.Bauteil;
+import mps.materialwirtschaft.entities.Stueckliste;
 import mps.materialwirtschaft.repositories.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.List;
  * Time: 23:14
  * To change this template use File | Settings | File Templates.
  */
-public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
+public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf, MaterialwirtschaftForGUI{
 	private MaterialwirtschaftBusinesslogic bl;
     private TransactionManager tm;
     private BauteilRepository bauteilRepo;
@@ -26,8 +27,8 @@ public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
 	public MaterialwirtschaftFacade()
 	{
         tm = new TransactionManager( Persistence.getSessionFactory() );
-		bl = new MaterialwirtschaftBusinesslogic();
         bauteilRepo = new BauteilRepository(Persistence.getSessionFactory());
+		bl = new MaterialwirtschaftBusinesslogic(Persistence.getSessionFactory());
 	}
 
     public boolean isComplex(int bauteilNr) {
@@ -58,5 +59,13 @@ public class MaterialwirtschaftFacade implements MaterialwirtschaftForVerkauf{
             returnValue.add(bauteil.toDTO());
         }
         return returnValue;
+    }
+
+    @Override
+    public BauteilDTO createBauteil(Stueckliste stueckliste, String name) {
+        tm.beginTransaction();
+        Bauteil bt = bl.createBauteil(stueckliste,name);
+        tm.commit();
+        return bt.toDTO();
     }
 }

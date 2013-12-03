@@ -19,6 +19,23 @@ public class BauteilDTO {
         this.nr = nr;
     }
 
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof BauteilDTO))
+            return false;
+        BauteilDTO b = (BauteilDTO)o;
+        if(b.getNr() != this.getNr())
+            return false;
+        if(!b.getName().equals(this.getName()))
+            return false;
+        if(!b.getStueckliste().equals(this.getStueckliste()))
+            return false;
+        return true;
+    }
+
     public StuecklisteDTO getStueckliste() {
         return stueckliste;
     }

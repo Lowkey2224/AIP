@@ -1,10 +1,11 @@
 package mps.materialwirtschaft.repositories;
 
-import mps.repositories.Repository;
 import mps.materialwirtschaft.entities.Bauteil;
 import mps.repositories.RepositoryImplementation;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -45,5 +46,14 @@ public class BauteilRepository extends RepositoryImplementation<Bauteil> {
     @Override
     public SessionFactory getSessionFactory() {
         return sf;
+    }
+
+    public int getMaxNr()
+    {
+        Session session = sf.getCurrentSession();
+        Criteria criteria = session
+                .createCriteria(Bauteil.class)
+                .setProjection(Projections.max("nr"));
+        return  (Integer)criteria.uniqueResult();
     }
 }
