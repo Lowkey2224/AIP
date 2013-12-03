@@ -31,7 +31,7 @@ import java.util.Date;
  * Time: 18:11
  * To change this template use File | Settings | File Templates.
  */
-public class VerkaufFacadeTest {
+public class IntegrationsTest {
 
     VerkaufFacade verkauf;
 
