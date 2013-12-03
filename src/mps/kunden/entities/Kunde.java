@@ -24,6 +24,23 @@ public class Kunde {
     @Column(nullable =  false)
     public String address;
 
+    @Override
+    public boolean equals(Object o )
+    {
+        if(o == null)
+            return false;
+        if(!(o instanceof Kunde))
+            return false;
+        Kunde other = (Kunde)o;
+        if (!other.getAddress().equals(this.getAddress()))
+            return false;
+        if(!other.getName().equals(this.getName()))
+            return false;
+        if(other.getNr()!= this.getNr())
+            return false;
+        return true;
+    }
+
     public KundeDTO toDTO()
     {
         return new KundeDTO(name, address,nr);
