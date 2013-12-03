@@ -1,17 +1,15 @@
 package mps.verkauf;
 
 import mps.Persistence;
-import mps.TransactionManager;
-import mps.fertigung.FertigungFacade;
 import mps.fertigung.FertigungForVerkauf;
 import mps.kunden.dtos.KundeDTO;
+import mps.kunden.dtos.KundeDTOImpl;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.materialwirtschaft.dtos.BauteilDTO;
-import mps.verkauf.dtos.*;
 import mps.verkauf.entities.*;
 import mps.verkauf.repositories.AngebotRepository;
-import mps.verkauf.repositories.AuftragRepository;
 
+import java.rmi.RemoteException;
 import java.util.Date;
 
 /**
@@ -50,7 +48,11 @@ public class VerkaufBusinesslogic {
     public Angebot createAngebot(KundeDTO kundeDTO) {
         Angebot angebot = new Angebot();
         angebot.setGueltigAb(new Date());
-        angebot.setKundeNr(kundeDTO.getNr());
+        try {
+            angebot.setKundeNr(kundeDTO.getNr());
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         angebot.setNr(this.doSomeMagicForAngebotNummer());
         angebot.setGueltigBis(new Date(angebot.getGueltigAb().getTime() + this.daysInMillies(7)));
         return angebot;  //To change body of created methods use File | Settings | File Templates.

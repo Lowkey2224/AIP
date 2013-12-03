@@ -3,11 +3,11 @@ package mps.verkauf;
 import mps.Persistence;
 import mps.TransactionManager;
 import mps.fertigung.FertigungForVerkauf;
+import mps.kunden.dtos.KundeDTOImpl;
 import mps.kunden.KundenForVerkauf;
 import mps.kunden.dtos.KundeDTO;
 import mps.materialwirtschaft.MaterialwirtschaftForVerkauf;
 import mps.materialwirtschaft.dtos.BauteilDTO;
-import mps.materialwirtschaft.entities.Bauteil;
 import mps.verkauf.dtos.AngebotDTO;
 import mps.verkauf.dtos.AuftragDTO;
 import mps.verkauf.entities.Angebot;
@@ -15,6 +15,7 @@ import mps.verkauf.entities.Auftrag;
 import mps.verkauf.repositories.AngebotRepository;
 import mps.verkauf.repositories.AuftragRepository;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -47,12 +48,22 @@ public class VerkaufFacade implements VerkaufForGUI{
 
     @Override
     public List<KundeDTO> findKundenByName(String name) {
-        return kund.findKundenByName(name);
+        try {
+            return kund.findKundenByName(name);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return null;
+        }
     }
 
     @Override
     public KundeDTO findOneKundeByNr(int nr) {
-        return kund.findOneKundeByNr(nr);
+        try {
+            return kund.findOneKundeByNr(nr);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return null;
+        }
     }
 
     @Override

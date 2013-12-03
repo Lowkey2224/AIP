@@ -1,8 +1,10 @@
 package mps.kunden.entities;
 
 import mps.kunden.dtos.KundeDTO;
+import mps.kunden.dtos.KundeDTOImpl;
 
 import javax.persistence.*;
+import java.rmi.RemoteException;
 
 /**
  * User: Loki
@@ -43,15 +45,24 @@ public class Kunde {
 
     public KundeDTO toDTO()
     {
-        return new KundeDTO(name, address,nr);
+        try {
+            return new KundeDTOImpl(name, address,nr);
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            return  null;
+        }
     }
 
-    public static Kunde fromDTO(KundeDTO dto)
+    public static Kunde fromDTO(KundeDTOImpl dto)
     {
         Kunde k = new Kunde();
-        k.name = dto.getName();
-        k.nr = dto.getNr();
-        k.address = dto.getAddress();
+        try {
+            k.name = dto.getName();
+            k.nr = dto.getNr();
+            k.address = dto.getAddress();
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         return  k;
     }
 
