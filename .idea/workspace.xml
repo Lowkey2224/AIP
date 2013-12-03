@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fdd369b-c0b0-4c3a-89f5-62325293555a" name="Default" comment="" />
+    <list default="true" id="6fdd369b-c0b0-4c3a-89f5-62325293555a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="HibernateTest.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/hibernate.cfg.xml" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382449606173" ignored="false" />
-    <file path="/fragment.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335047111" ignored="false" />
+    <file path="/fragment.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386003326349" ignored="false" />
     <file path="/SQLiteDialect.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382442874147" ignored="false" />
-    <file path="/Kunde.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382464219476" ignored="false" />
+    <file path="/Kunde.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386005534077" ignored="false" />
     <file path="/Main.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384275022978" ignored="false" />
     <file path="/kunde_repository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382449122027" ignored="false" />
-    <file path="/KundeRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382518472111" ignored="false" />
+    <file path="/KundeRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386008889410" ignored="false" />
     <file path="/Bankkonto.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382464199240" ignored="false" />
     <file path="/Kinokarte.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382464700600" ignored="false" />
     <file path="/Kinosaal.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382464214020" ignored="false" />
@@ -18,33 +21,45 @@
     <file path="/BankkontoRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382465722669" ignored="false" />
     <file path="/KinokarteRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382465764318" ignored="false" />
     <file path="/KinosaalRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1382517808249" ignored="false" />
-    <file path="/VerkaufFacadeTest.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384341830474" ignored="false" />
+    <file path="/VerkaufFacadeTest.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384454015856" ignored="false" />
     <file path="/AngebotDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384330165346" ignored="false" />
-    <file path="/VerkaufFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384281012802" ignored="false" />
+    <file path="/VerkaufFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386014691421" ignored="false" />
     <file path="/StuecklisteDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384296064090" ignored="false" />
     <file path="/StuecklistenPositionDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384295769372" ignored="false" />
-    <file path="/Persistence.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335626355" ignored="false" />
+    <file path="/Persistence.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386003287484" ignored="false" />
     <file path="/AuftragDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384281952324" ignored="false" />
     <file path="/Angebot.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384331746731" ignored="false" />
     <file path="/Auftrag.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384289576175" ignored="false" />
     <file path="/Businesslogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384282254546" ignored="false" />
-    <file path="/VerkaufBusinesslogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384330338291" ignored="false" />
-    <file path="/FertigungFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384290768884" ignored="false" />
-    <file path="/FertigungBusinesslogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335132009" ignored="false" />
+    <file path="/VerkaufBusinesslogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386014180939" ignored="false" />
+    <file path="/FertigungFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386011146531" ignored="false" />
+    <file path="/FertigungBusinesslogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386011121386" ignored="false" />
     <file path="/Bauteil.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384295387119" ignored="false" />
     <file path="/Stueckliste.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384338745346" ignored="false" />
     <file path="/BauteilDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384295349625" ignored="false" />
     <file path="/StuecklistenPosition.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384336113431" ignored="false" />
-    <file path="/FertigungsplanDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384329613778" ignored="false" />
+    <file path="/FertigungsplanDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386004871335" ignored="false" />
     <file path="/Fertigungsplan.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384332270409" ignored="false" />
-    <file path="/MaterialwirtschaftFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384334784167" ignored="false" />
-    <file path="/BauteilRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384333440973" ignored="false" />
-    <file path="/FertigungsplanRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335100564" ignored="false" />
-    <file path="/ArbeitsplanDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335291415" ignored="false" />
-    <file path="/Arbeitsplan.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384335521702" ignored="false" />
-    <file path="/StuecklistenPositionRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384336500925" ignored="false" />
-    <file path="/StuecklisteRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384337813735" ignored="false" />
+    <file path="/MaterialwirtschaftFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386014985191" ignored="false" />
+    <file path="/BauteilRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386015316026" ignored="false" />
+    <file path="/FertigungsplanRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386007849784" ignored="false" />
+    <file path="/ArbeitsplanDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386004860208" ignored="false" />
+    <file path="/Arbeitsplan.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386004885652" ignored="false" />
+    <file path="/StuecklistenPositionRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386007975388" ignored="false" />
+    <file path="/StuecklisteRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386007993548" ignored="false" />
     <file path="/MaterialwirtschaftTest.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384342106290" ignored="false" />
+    <file path="/Dummy.txt" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386066290070" ignored="false" />
+    <file path="/File Header.txt.ft" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1384455490267" ignored="false" />
+    <file path="/KundenFacade.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386011615077" ignored="false" />
+    <file path="/KundenForVerkauf.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386004502292" ignored="false" />
+    <file path="/DTOable.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386005067094" ignored="false" />
+    <file path="/KundeDTO.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386005387178" ignored="false" />
+    <file path="/KundenBusinessLogic.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386011672391" ignored="false" />
+    <file path="/Repository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386010507125" ignored="false" />
+    <file path="/RepositoryImplementation.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386015098755" ignored="false" />
+    <file path="/AngebotRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386013309539" ignored="false" />
+    <file path="/AuftragRepository.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386011243070" ignored="false" />
+    <file path="/MaterialwirtschaftForVerkauf.java" changelist="6fdd369b-c0b0-4c3a-89f5-62325293555a" time="1386014673948" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,85 +128,7 @@
       <file leaf-file-name="VerkaufBusinesslogic.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufBusinesslogic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="37" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FertigungFacade.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="36" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FertigungBusinesslogic.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungBusinesslogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="29" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerkaufFacadeTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/tests/VerkaufFacadeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="40" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.93602693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BauteilRepository.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/BauteilRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaterialwirtschaftTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/tests/MaterialwirtschaftTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="120" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerkaufFacade.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="28" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaterialwirtschaftFacade.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="20" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fertigungsplan.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mps/fertigung/entities/Fertigungsplan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="5" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.0">
+            <state line="73" column="65" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -200,7 +137,81 @@
       <file leaf-file-name="Angebot.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mps/verkauf/entities/Angebot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="11" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.0">
+            <state line="18" column="13" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KundenBusinessLogic.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/kunden/KundenBusinessLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="17" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerkaufFacade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="61" selection-start="2325" selection-end="2325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AngebotRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/verkauf/repositories/AngebotRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="15" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaterialwirtschaftFacade.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="66" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.34708738">
+              <folding>
+                <element signature="e#1577#1589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BauteilRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/BauteilRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="5" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoryImplementation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/repositories/RepositoryImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="48" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaterialwirtschaftForVerkauf.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftForVerkauf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="15" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KundenFacade.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mps/kunden/KundenFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="50" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -213,34 +224,43 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftBusinesslogic.java" />
-        <option value="$PROJECT_DIR$/src/mps/fertigung/dtos/ArbeitsplanDTO.java" />
-        <option value="$PROJECT_DIR$/src/mps/fertigung/entities/Arbeitsplan.java" />
-        <option value="$PROJECT_DIR$/src/mps/Persistence.java" />
         <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/StuecklistenPositionRepository.java" />
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/StuecklisteRepository.java" />
+        <option value="$PROJECT_DIR$/src/mps/kunden/entities/Kunde.java" />
+        <option value="$PROJECT_DIR$/src/mps/kunden/repositories/KundeRepository.java" />
+        <option value="$PROJECT_DIR$/src/mps/repositories/Repository.java" />
+        <option value="$PROJECT_DIR$/src/mps/fertigung/FertigungFacade.java" />
         <option value="$PROJECT_DIR$/src/mps/fertigung/FertigungBusinesslogic.java" />
-        <option value="$PROJECT_DIR$/src/mps/verkauf/entities/Angebot.java" />
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/entities/StuecklistenPosition.java" />
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/entities/Stueckliste.java" />
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/entities/Bauteil.java" />
-        <option value="$PROJECT_DIR$/src/mps/fertigung/repositories/FertigungsplanRepository.java" />
-        <option value="$PROJECT_DIR$/src/mps/fertigung/entities/Fertigungsplan.java" />
-        <option value="$PROJECT_DIR$/src/tests/VerkaufFacadeTest.java" />
-        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/tests/MaterialwirtschaftTest.java" />
+        <option value="$PROJECT_DIR$/src/mps/verkauf/repositories/AuftragRepository.java" />
+        <option value="$PROJECT_DIR$/src/mps/kunden/KundenBusinessLogic.java" />
+        <option value="$PROJECT_DIR$/src/mps/kunden/KundenFacade.java" />
+        <option value="$PROJECT_DIR$/src/mps/verkauf/repositories/AngebotRepository.java" />
+        <option value="$PROJECT_DIR$/src/mps/verkauf/VerkaufBusinesslogic.java" />
+        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftForVerkauf.java" />
+        <option value="$PROJECT_DIR$/src/mps/verkauf/VerkaufFacade.java" />
         <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftFacade.java" />
+        <option value="$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/BauteilRepository.java" />
+        <option value="$PROJECT_DIR$/src/mps/repositories/RepositoryImplementation.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1914" />
-    <option name="height" value="820" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -268,273 +288,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="verkauf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="materialwirtschaft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="materialwirtschaft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repositories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="materialwirtschaft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="materialwirtschaft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fertigung" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fertigung" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HibernateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fertigung" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dtos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -617,11 +370,385 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verkauf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="verkauf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialwirtschaft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="materialwirtschaft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kunden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kunden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kunden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kunden" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fertigung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fertigung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fertigung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HibernateTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fertigung" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dtos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="fileTemplates" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -632,6 +759,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
@@ -645,8 +774,10 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="mps.fertigung.repositories" />
+      <recent name="mps.kunden" />
       <recent name="mps.fertigung" />
+      <recent name="mps.materialwirtschaft" />
+      <recent name="mps.fertigung.repositories" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/lib" />
@@ -902,6 +1033,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6fdd369b-c0b0-4c3a-89f5-62325293555a" name="Default" comment="" />
@@ -911,14 +1059,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1914" height="820" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -927,18 +1073,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19753747" sideWeight="0.63857144" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19706242" sideWeight="0.67164177" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36142856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32613635" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1007,123 +1155,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+    <entry file="file://$PROJECT_DIR$/src/mps/kunden/entities/Kunde.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.31578946">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/verkauf/repositories/AngebotRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="20" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/entities/StuecklistenPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="24" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/entities/Stueckliste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/entities/Bauteil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="204" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/repositories/FertigungsplanRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="44" selection-start="1200" selection-end="1218" vertical-scroll-proportion="0.0">
+        <state line="17" column="22" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/entities/Fertigungsplan.java">
+    <entry file="file://$PROJECT_DIR$/src/mps/kunden/repositories/KundeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="5" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.0">
+        <state line="42" column="27" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/repositories/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="5" selection-start="160" selection-end="160" vertical-scroll-proportion="0.24757281">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungBusinesslogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="8" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="100" selection-start="1110" selection-end="1110" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/verkauf/repositories/AuftragRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="17" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/kunden/KundenBusinessLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="17" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/kunden/KundenFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="50" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mps/verkauf/entities/Angebot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="11" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.0">
+        <state line="18" column="13" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/BauteilRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/mps/verkauf/repositories/AngebotRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="20" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/tests/MaterialwirtschaftTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="120" selection-start="4349" selection-end="4349" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
+        <state line="50" column="15" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufBusinesslogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="36" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mps/fertigung/FertigungBusinesslogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
+        <state line="73" column="65" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/VerkaufFacadeTest.java">
+    <entry file="file://$PROJECT_DIR$/src/mps/verkauf/VerkaufFacade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="40" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.93602693">
+        <state line="65" column="61" selection-start="2325" selection-end="2325" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/repositories/BauteilRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="5" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftForVerkauf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="15" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/repositories/RepositoryImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="48" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mps/materialwirtschaft/MaterialwirtschaftFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="66" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.34708738">
+          <folding>
+            <element signature="e#1577#1589#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
