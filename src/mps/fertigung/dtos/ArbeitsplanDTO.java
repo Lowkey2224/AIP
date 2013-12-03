@@ -1,9 +1,5 @@
 package mps.fertigung.dtos;
 
-import mps.verkauf.dtos.AuftragDTO;
-
-import java.util.List;
-
 /**
  * Created with IntelliJ IDEA.
  * User: r3l4x

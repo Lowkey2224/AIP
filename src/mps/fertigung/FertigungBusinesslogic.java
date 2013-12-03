@@ -25,22 +25,15 @@ public class FertigungBusinesslogic {
 
 
 
-    public FertigungsplanDTO createFertigungsplan(AuftragDTO auftragDTO) {
-
-        TransactionManager transactionManager = new TransactionManager( Persistence.getSessionFactory() );
+    public Fertigungsplan createFertigungsplan(AuftragDTO auftragDTO) {
 
         Fertigungsplan fp  = new Fertigungsplan();
         fp.setAuftragNr(auftragDTO.getNr());
         fp.setBauteilNr(auftragDTO.getAngebot().getBauteilNr());
-        // Begin Transaction
-        transactionManager.beginTransaction();
+        return fp;
 
-        FertigungsplanRepository fertigungsplanRepository = new FertigungsplanRepository(Persistence.getSessionFactory());
-        fertigungsplanRepository.save(fp);
 
-        transactionManager.commit();
 
-        return fp.toDTO();
 
     }
         /*

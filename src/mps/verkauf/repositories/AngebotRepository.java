@@ -1,8 +1,11 @@
 package mps.verkauf.repositories;
 
+import mps.repositories.RepositoryImplementation;
 import mps.verkauf.entities.Angebot;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
@@ -14,7 +17,7 @@ import java.util.List;
  * Time: 16:03
  * To change this template use File | Settings | File Templates.
  */
-public class AngebotRepository {
+public class AngebotRepository extends RepositoryImplementation<Angebot>{
     SessionFactory sf;
 
     public AngebotRepository(SessionFactory sf)
@@ -22,16 +25,9 @@ public class AngebotRepository {
         this.sf = sf;
     }
 
-    public void delete(Angebot angebot)
-    {
-        Session session = sf.getCurrentSession();
-        session.delete(angebot);
-    }
-
-    public void save(Angebot angebot)
-    {
-        Session session = sf.getCurrentSession();
-        session.saveOrUpdate(angebot);
+    @Override
+    public SessionFactory getSessionFactory() {
+        return sf;
     }
 
     public Angebot findOneByNr(int nr)
@@ -44,6 +40,15 @@ public class AngebotRepository {
             return null;
 
         return result.get(0);
+    }
+
+    public int getMaxNr()
+    {
+        Session session = sf.getCurrentSession();
+        Criteria criteria = session
+                .createCriteria(Angebot.class)
+                .setProjection(Projections.max("nr"));
+        return  (Integer)criteria.uniqueResult();
     }
 
 

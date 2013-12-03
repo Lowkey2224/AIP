@@ -1,5 +1,6 @@
 package mps.verkauf.repositories;
 
+import mps.repositories.RepositoryImplementation;
 import mps.verkauf.entities.Auftrag;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,24 +15,12 @@ import java.util.List;
  * Time: 16:03
  * To change this template use File | Settings | File Templates.
  */
-public class AuftragRepository {
+public class AuftragRepository extends RepositoryImplementation<Auftrag>{
     SessionFactory sf;
 
     public AuftragRepository(SessionFactory sf)
     {
         this.sf = sf;
-    }
-
-    public void delete(Auftrag auftrag)
-    {
-        Session session = sf.getCurrentSession();
-        session.delete(auftrag);
-    }
-
-    public void save(Auftrag auftrag)
-    {
-        Session session = sf.getCurrentSession();
-        session.saveOrUpdate(auftrag);
     }
 
     public Auftrag findOneByNr(int nr)
@@ -47,4 +36,8 @@ public class AuftragRepository {
     }
 
 
+    @Override
+    public SessionFactory getSessionFactory() {
+        return sf;
+    }
 }

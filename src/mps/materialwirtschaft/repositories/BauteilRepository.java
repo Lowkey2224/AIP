@@ -1,6 +1,8 @@
 package mps.materialwirtschaft.repositories;
 
+import mps.repositories.Repository;
 import mps.materialwirtschaft.entities.Bauteil;
+import mps.repositories.RepositoryImplementation;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
@@ -14,24 +16,17 @@ import java.util.List;
  * Time: 16:03
  * To change this template use File | Settings | File Templates.
  */
-public class BauteilRepository {
+public class BauteilRepository extends RepositoryImplementation<Bauteil> {
     SessionFactory sf;
 
-	public BauteilRepository(SessionFactory sf)
+    public BauteilRepository(SessionFactory sf)
 	{
         this.sf = sf;
     }
 
-    public void delete(Bauteil elem)
-    {
-        Session session = sf.getCurrentSession();
-        session.delete(elem);
-    }
-
-    public void save(Bauteil elem)
-    {
-        Session session = sf.getCurrentSession();
-        session.saveOrUpdate(elem);
+    public List<Bauteil> findAll() {
+        Session session = getSessionFactory().getCurrentSession();
+        return session.createCriteria(Bauteil.class).list();
     }
 
     public Bauteil findOneByNr(int nr)
@@ -47,4 +42,8 @@ public class BauteilRepository {
     }
 
 
+    @Override
+    public SessionFactory getSessionFactory() {
+        return sf;
+    }
 }
