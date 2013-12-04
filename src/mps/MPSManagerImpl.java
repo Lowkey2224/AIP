@@ -4,6 +4,7 @@ import Dashboard.AliveNotificator;
 import Dashboard.AliveNotificatorImpl;
 
 import java.net.MalformedURLException;
+import java.rmi.ConnectException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -36,7 +37,12 @@ public class MPSManagerImpl extends UnicastRemoteObject implements MPSManager {
                             System.out.println("Sende alive");
                         }
                         sleep(2000);
-                    }catch(InterruptedException e)
+                    }
+                    catch (ConnectException e)
+                    {
+                        System.out.println("Monitor nicht erreicht");
+                    }
+                    catch(InterruptedException e)
                     {
                         System.out.println("AliveThread stoppt");
                         break;
