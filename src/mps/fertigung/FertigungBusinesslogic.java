@@ -1,21 +1,7 @@
 package mps.fertigung;
 
-import mps.fertigung.dtos.*;
-import mps.Persistence;
-import mps.TransactionManager;
 import mps.fertigung.entities.Fertigungsplan;
-import mps.fertigung.repositories.FertigungsplanRepository;
-import mps.materialwirtschaft.MaterialwirtschaftFacade;
-import mps.materialwirtschaft.dtos.StuecklisteDTO;
-import mps.materialwirtschaft.dtos.StuecklistenPositionDTO;
-import mps.materialwirtschaft.entities.Bauteil;
-import mps.materialwirtschaft.entities.Stueckliste;
-import mps.materialwirtschaft.repositories.BauteilRepository;
 import mps.verkauf.dtos.AuftragDTO;
-import org.hibernate.SessionFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
