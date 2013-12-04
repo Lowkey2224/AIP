@@ -10,7 +10,7 @@ public class Dispatcher {
 		monitor = frame;
 	}
 
-    public MPSManager call()
+    public MPSManager remoteCall()
     {
         return getRunningMPS();
     }

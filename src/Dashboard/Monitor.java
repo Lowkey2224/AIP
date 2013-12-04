@@ -15,6 +15,9 @@ import java.awt.event.ActionEvent;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
@@ -37,12 +40,28 @@ public class Monitor extends JFrame {
     private JLabel counterlabel1;
     private JLabel counterlabel2;
 
-    JLabel lastMPS1AliveLabel;
-    JLabel lastMPS2AliveLabel;
+    private Canvas canvasRed1;
+    private Canvas canvasRed2;
+    private Canvas canvasGreen1;
+    private Canvas canvasGreen2;
+
+    private JLabel lastMPS1AliveLabel;
+    private JLabel lastMPS2AliveLabel;
+    private boolean lastAliveStateMPS1;
+    private boolean lastAliveStateMPS2;
+    private long lastAliveStateChangeMPS1;
+    private long lastAliveStateChangeMPS2;
+
+    private JLabel lblStatus;
+
+    private JLabel timeMPS1;
+    private JLabel timeMPS2;
 
     private Dispatcher dispatcher;
     private AliveNotificator aliveNotificator;
 
+
+    private long maxAliveIntervall = 2500;
 
     Thread refreshThread = new Thread()
     {
@@ -52,7 +71,7 @@ public class Monitor extends JFrame {
             {
                 try{
                     refreshView();
-                    sleep(200);
+                    sleep(100);
                 }catch(InterruptedException e)
                 {
                     System.out.println("RefresThread stoppt");
@@ -61,6 +80,7 @@ public class Monitor extends JFrame {
             }
         }
     };
+
 
     /**
      * Create the frame.
@@ -109,15 +129,16 @@ public class Monitor extends JFrame {
         counterlabel1.setBounds(386, 48, 112, 51);
         panel_1.add(counterlabel1);
 
-        Canvas canvas = new Canvas();
-        canvas.setBackground(Color.RED);
-        canvas.setBounds(43, 37, 50, 51);
-        panel_1.add(canvas);
 
-        Canvas canvas_1 = new Canvas();
-        canvas_1.setBackground(new Color(50, 205, 50));
-        canvas_1.setBounds(43, 100, 50, 51);
-        panel_1.add(canvas_1);
+        canvasRed1 = new Canvas();
+        canvasRed1.setBackground(Color.RED);
+        canvasRed1.setBounds(43, 37, 50, 51);
+        panel_1.add(canvasRed1);
+
+        canvasGreen1 = new Canvas();
+        canvasGreen1.setBackground(Color.gray);
+        canvasGreen1.setBounds(43, 100, 50, 51);
+        panel_1.add(canvasGreen1);
 
         Canvas canvas_2 = new Canvas();
         canvas_2.setBackground(new Color(105, 105, 105));
@@ -169,10 +190,11 @@ public class Monitor extends JFrame {
         lastMPS1AliveLabel.setBounds(444, 7, 86, 16);
         panel_1.add(lastMPS1AliveLabel);
 
-        JLabel label_1 = new JLabel("00:00:23");
-        label_1.setFont(new Font("Lucida Grande", Font.BOLD, 45));
-        label_1.setBounds(131, 48, 214, 51);
-        panel_1.add(label_1);
+
+        timeMPS1 = new JLabel("00:00:23");
+        timeMPS1.setFont(new Font("Lucida Grande", Font.BOLD, 45));
+        timeMPS1.setBounds(131, 48, 214, 51);
+        panel_1.add(timeMPS1);
 
         Panel panel_2 = new Panel();
         panel_2.setLayout(null);
@@ -196,15 +218,15 @@ public class Monitor extends JFrame {
         counterlabel2.setBounds(386, 48, 112, 51);
         panel_2.add(counterlabel2);
 
-        Canvas canvas_5 = new Canvas();
-        canvas_5.setBackground(Color.RED);
-        canvas_5.setBounds(43, 37, 50, 51);
-        panel_2.add(canvas_5);
+        canvasRed2 = new Canvas();
+        canvasRed2.setBackground(Color.red);
+        canvasRed2.setBounds(43, 37, 50, 51);
+        panel_2.add(canvasRed2);
 
-        Canvas canvas_6 = new Canvas();
-        canvas_6.setBackground(new Color(50, 205, 50));
-        canvas_6.setBounds(43, 100, 50, 51);
-        panel_2.add(canvas_6);
+        canvasGreen2 = new Canvas();
+        canvasGreen2.setBackground(Color.gray);
+        canvasGreen2.setBounds(43, 100, 50, 51);
+        panel_2.add(canvasGreen2);
 
         Canvas canvas_7 = new Canvas();
         canvas_7.setBackground(new Color(105, 105, 105));
@@ -254,10 +276,10 @@ public class Monitor extends JFrame {
         lastMPS2AliveLabel.setBounds(444, 7, 86, 16);
         panel_2.add(lastMPS2AliveLabel);
 
-        JLabel label_8 = new JLabel("00:00:23");
-        label_8.setFont(new Font("Lucida Grande", Font.BOLD, 45));
-        label_8.setBounds(131, 48, 214, 51);
-        panel_2.add(label_8);
+        timeMPS2 = new JLabel("00:00:23");
+        timeMPS2.setFont(new Font("Lucida Grande", Font.BOLD, 45));
+        timeMPS2.setBounds(131, 48, 214, 51);
+        panel_2.add(timeMPS2);
 
         JButton btnAnfrage = new JButton("Anfrage 1");
         btnAnfrage.addActionListener(new ActionListener() {
@@ -286,6 +308,12 @@ public class Monitor extends JFrame {
         btnAnfrage_2.setBounds(258, 413, 117, 29);
         panel.add(btnAnfrage_2);
 
+
+        lblStatus = new JLabel("");
+        lblStatus.setHorizontalAlignment(SwingConstants.RIGHT);
+        lblStatus.setBounds(134, 15, 408, 24);
+        panel.add(lblStatus);
+
         // Connect to MPSs
         this.mpsAdress1 = mps1;
         this.mpsAdress2 = mps2;
@@ -299,11 +327,14 @@ public class Monitor extends JFrame {
 
         try {
 
-            MPSManager remoteMPSManager = this.dispatcher.call();
-            MPSInstance remoteMPSInstance = remoteMPSManager.getMPSInstance();
-            KundenForVerkauf remoteKundenFacade = remoteMPSInstance.getKundenFacade();
+            MPSManager remoteMPSManager = this.dispatcher.remoteCall();
+            if(remoteMPSManager != null)
+            {
+                MPSInstance remoteMPSInstance = remoteMPSManager.getMPSInstance();
+                KundenForVerkauf remoteKundenFacade = remoteMPSInstance.getKundenFacade();
 
-            KundeDTO k = remoteKundenFacade.createKunde("Max Mustermann", "Adresse");
+                KundeDTO k = remoteKundenFacade.createKunde("Max Mustermann", "Adresse");
+            }
 
         } catch (RemoteException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -393,24 +424,80 @@ public class Monitor extends JFrame {
 
     public MPSManager getRunningMPS() {
 
-        MPSManager theChoosenOne;
+        MPSManager theChoosenOne = null;
 
-        if(!flagMPS)
+
+        // Wenn ein MPS alive
+        if( lastAliveStateMPS1 || lastAliveStateMPS2 )
         {
-            countMPS1++;
-            theChoosenOne = mpsManager1;
-        } else
-        {
-            countMPS2++;
-            theChoosenOne = mpsManager2;
+
+            boolean bothAlive = (lastAliveStateMPS1 && lastAliveStateMPS2);
+
+            if( (bothAlive && !flagMPS) ||  (lastAliveStateMPS1 && !bothAlive) )
+            {
+                countMPS1++;
+                theChoosenOne = mpsManager1;
+                lblStatus.setText("Nutze MPS1");
+                flagMPS = !flagMPS;
+            } else if ( (bothAlive && flagMPS) ||  (lastAliveStateMPS2 && !bothAlive) )
+            {
+                countMPS2++;
+                theChoosenOne = mpsManager2;
+                lblStatus.setText("Nutze MPS2");
+                flagMPS = !flagMPS;
+            }
+            refreshView();
+            return theChoosenOne;
         }
-        flagMPS = !flagMPS;
-        refreshView();
+        else
+        {
+            lblStatus.setText("Kein MPS erreichbar");
+            return null;
+        }
 
-        return theChoosenOne;
     }
 
     private void refreshView() {
+
+        boolean  currentAliveStateMPS1, currentAliveStateMPS2;
+        long now = System.currentTimeMillis();
+
+        currentAliveStateMPS1 = isMPS1alive();
+        currentAliveStateMPS2 = isMPS2alive();
+
+        if (currentAliveStateMPS1 != lastAliveStateMPS1)
+            lastAliveStateChangeMPS1 = now;
+
+        if (currentAliveStateMPS2 != lastAliveStateMPS2)
+            lastAliveStateChangeMPS2 = now;
+
+        Date time1 = new Date(now - lastAliveStateChangeMPS1);
+        Date time2 = new Date(now - lastAliveStateChangeMPS2);
+        DateFormat formatter = new SimpleDateFormat("m:ss:SSS");
+        timeMPS1.setText(  formatter.format(time1) );
+        timeMPS2.setText(  formatter.format(time2) );
+
+        // Ampel 1
+        if (lastAliveStateMPS1 = currentAliveStateMPS1)
+        {
+            canvasGreen1.setBackground(Color.green);
+            canvasRed1.setBackground(Color.gray);
+        } else
+        {
+            canvasGreen1.setBackground(Color.gray);
+            canvasRed1.setBackground(Color.red);
+        }
+
+        // Ampel 2
+        if (lastAliveStateMPS2 = currentAliveStateMPS2)
+        {
+            canvasGreen2.setBackground(Color.green);
+            canvasRed2.setBackground(Color.gray);
+        }   else
+        {
+            canvasGreen2.setBackground(Color.gray);
+            canvasRed2.setBackground(Color.red);
+        }
 
         Long timediff1 = System.currentTimeMillis() - lastMPS1Alive;
         lastMPS1AliveLabel.setText( timediff1.toString() + " ms");
@@ -420,6 +507,8 @@ public class Monitor extends JFrame {
 
         counterlabel1.setText(countMPS1.toString());
         counterlabel2.setText(countMPS2.toString());
+
+
 
     }
 
@@ -440,5 +529,12 @@ public class Monitor extends JFrame {
         refreshView();
         lastMPS2Alive = System.currentTimeMillis();
         System.out.println("MPS2 alive");
+    }
+
+    public boolean isMPS2alive() {
+        return (System.currentTimeMillis() - lastMPS2Alive) <= maxAliveIntervall;
+    }
+    public boolean isMPS1alive() {
+        return (System.currentTimeMillis() - lastMPS1Alive) <= maxAliveIntervall;
     }
 }
